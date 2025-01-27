@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trainspose</title>
+    <link rel="icon" href="/assets/icon.png" type="image/png"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <h1><img class="logo" src="/assets/icon.png">Trainspose</h1>
+    <div>
+      What if 
+      <button id="system-select" data-micromodal-trigger="system-modal">System</button>
+      was built in
+      <button id="location-select" data-micromodal-trigger="location-modal">Location</button>
+      ?
+    </div>
+    <div id="map"></div>
+    <div>
+      Rotation:
+      <input type="range" min="0" max="359" value="0" id="rotation-slider"/>
+    </div>
+    <p class="hint">You can drag the system map around to adjust its location.</p>
+    <a href="https://ko-fi.com/williamholland"><img src="/assets/kofi.png" alt="support me on ko-fi" height="40px"/></a>
+    <div class="modal" id="system-modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-label="system select modal">
+          <button aria-label="Close modal" data-micromodal-close>&times;</button>
+          <div id="system-list">
+            <div>
+              <input type="search" class="search" placeholder="Search" />
+            </div>
+            <ul class="list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="location-modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-label="location select modal">
+          <button aria-label="Close modal" data-micromodal-close>&times;</button>
+          <form id="location-search">
+            <input type="search" id="location-input" placeholder="Type any place name"></input>
+            <input type="submit" value="Go"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/dist/bundle.js"></script>
+  </body>
+</html>
