@@ -27,7 +27,7 @@ button:hover {
 }
 
 #map {
-    height: 80%;
+    height: 80svh;
     z-index: 0;
     margin-top: 1em;
     margin-bottom: 1em;
