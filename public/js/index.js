@@ -16,7 +16,7 @@ L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map)
 
-const geojsonFeature = await fetch('geometry/test.json').then(response => response.json())
+const geojsonFeature = await fetch('trainspose/geometry/test.json').then(response => response.json())
 
 let systemMap = L.trueSize(geojsonFeature, {
   color: MAP_COLOR,
@@ -86,7 +86,7 @@ List('system-list', options, values)
 const selectSystem = async (systemId) => {
   const center = systemMap.getCenter()
   map.removeLayer(systemMap)
-  const geojsonFeature = await fetch(`geometry/${encodeURIComponent(systemId)}.json`).then(response => response.json())
+  const geojsonFeature = await fetch(`trainspose/geometry/${encodeURIComponent(systemId)}.json`).then(response => response.json())
   systemMap = L.trueSize(geojsonFeature, {
     color: MAP_COLOR,
     weight: 1,
