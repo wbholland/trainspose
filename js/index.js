@@ -39,7 +39,6 @@ const options = {
     <button
       class="system-btn"
       id="${values.systemId}"
-      data-micromodal-close
     >
       <span class="name">${values.name}</span>
       <span class="location">${values.location}</span>
@@ -98,6 +97,7 @@ const selectSystem = async (systemId) => {
   map.fitBounds(systemMap.getBounds())
   document.getElementById('system-select').textContent = values.find((obj) => obj.systemId === systemId).name
   document.getElementById('rotation-slider').value = 0
+  document.getElementById('close-system').click()
 }
 
 for (const button of document.getElementsByClassName('system-btn')) {
