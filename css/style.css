@@ -131,6 +131,10 @@ input[type="range"] {
         font-size: 10svw
     }
 
+    h1 {
+        display:block
+    }
+
     ul {
         padding: 0
     }
