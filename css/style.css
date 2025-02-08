@@ -131,7 +131,7 @@ input[type="range"] {
         font-size: 10svw
     }
 
-    h1 {
+    .modal__header>h1 {
         display:block
     }
 
