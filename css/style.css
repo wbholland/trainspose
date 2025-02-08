@@ -1,7 +1,9 @@
-body, button, input {
-    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+body,
+button,
+input {
+    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .hint {
@@ -9,21 +11,26 @@ body, button, input {
 }
 
 body {
-    margin-inline: 10vw;
+    margin-inline: 10svw;
 }
 
-button {
-    border:none;
+button, input[type="submit"]{
+    border: none;
     background-color: #FE11A5;
     color: white
 }
 
-button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+input[type="submit"] {
+    margin-top: 1em;
+    width:100%
+}
+
+button:hover, input[type="submit"]:hover {
+    box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);
+}
 
 .logo {
-    height: 1em;
+    height: 0.8em;
 }
 
 #map {
@@ -32,7 +39,10 @@ button:hover {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.draggable { cursor: move; }
+
+.draggable {
+    cursor: move;
+}
 
 .modal {
     display: none;
@@ -44,45 +54,92 @@ button:hover {
 
 .modal__overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.65);
+    background: rgb(0 0 0 / 65%);
 }
 
 .modal__container {
-    width: 80%;
-    height: 80%;
+    width: 80svw;
+    height: 80svh;
     overflow-y: auto;
     padding: 30px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 4px;
+    display: grid;
+    grid-template-areas: "header" "content";
+    grid-row-gap: 0.5em;
+}
+
+.modal__header {
+    grid-area: header;
+}
+
+.modal__header>h1 {
+    display: inline;
+    margin-left: 1em;
+}
+
+.modal__header>button {
+    position:fixed
+}
+
+.modal__content {
+    grid-area: content;
+    overflow-y:scroll
 }
 
 li {
     list-style-type: none;
-    margin:20px;
+    margin: 20px;
 }
 
-input[type=search] {
-    margin:20px
+input[type="search"] {
+    margin-top: 1em;
 }
 
-input[type=range] {
+input[type="range"] {
     vertical-align: middle;
     accent-color: #fe11a5;
+    max-width: 80vw;
 }
 
 .location {
     float: right;
 }
+
 .name {
-    float:left
+    float: left
 }
+
 .system-btn {
-    width:100%
+    width: 75svw
+}
+
+@media only screen and (width <= 768px) {
+    .modal__container {
+        width: auto;
+        background-color: white;
+        border-radius: 4px;
+        position: absolute;
+        inset: 5px
+    }
+
+    title, h1{
+        font-size: 10svw
+    }
+
+    ul {
+        padding: 0
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    input[type="search"] {
+        width: 100%
+    }
 }

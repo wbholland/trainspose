@@ -101,7 +101,7 @@ const selectSystem = async (systemId) => {
 }
 
 for (const button of document.getElementsByClassName('system-btn')) {
-  button.addEventListener('click', () => { console.log('hi'); selectSystem(button.id) })
+  button.addEventListener('click', () => selectSystem(button.id))
 }
 
 const selectLocation = async (locationText) => {
