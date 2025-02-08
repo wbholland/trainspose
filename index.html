@@ -28,7 +28,7 @@
     <a href="https://ko-fi.com/williamholland"><img src="assets/kofi.png" alt="support me on ko-fi" height="40px"/></a>
     <div class="modal" id="system-modal" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1">
-        <div class="modal__container" role="dialog" aria-modal="true" aria-label="system select modal">
+        <div id="system-list" class="modal__container" role="dialog" aria-modal="true" aria-label="system select modal">
           <div class="modal__header">
             <button id="close-system" aria-label="Close modal" data-micromodal-close>&times;</button>
             <h1>Transit Systems</h1>
@@ -36,7 +36,7 @@
               <input type="search" class="search" placeholder="Search" />
             </div>
           </div>
-          <div class="modal__content" id="system-list">
+          <div class="modal__content">
             <ul class="list"></ul>
           </div>
         </div>
