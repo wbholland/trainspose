@@ -132,7 +132,10 @@ input[type="range"] {
     }
 
     .modal__header>h1 {
-        display:block
+        display: block;
+        margin-left: 0;
+        margin-top:2em;
+        margin-bottom:0
     }
 
     ul {
