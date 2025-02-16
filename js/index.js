@@ -77,6 +77,41 @@ const values = [
     name: 'The NYC Subway',
     location: 'New York, NY, USA',
     systemId: 'mta'
+  },
+  {
+    name: 'MARTA',
+    location: 'Atlanta, GA, USA',
+    systemId: 'marta'
+  },
+  {
+    name: 'Sounder',
+    location: 'Seattle, WA, USA',
+    systemId: 'sounder'
+  },
+  {
+    name: 'MAX',
+    location: 'Portland, OR, USA',
+    systemId: 'max'
+  },
+  {
+    name: 'SkyTrain',
+    location: 'Vancouver, BC, Canada',
+    systemId: 'skytrain'
+  },
+  {
+    name: 'BART',
+    location: 'San Fransisco, CA, USA',
+    systemId: 'bart'
+  },
+  {
+    name: 'The Tube',
+    location: 'London, England, UK',
+    systemId: 'tube'
+  },
+  {
+    name: 'DC Metro',
+    location: 'Washington, DC, USA',
+    systemId: 'wmata'
   }
 ]
 
