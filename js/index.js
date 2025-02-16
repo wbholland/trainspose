@@ -117,6 +117,16 @@ const values = [
     name: 'Istanbul Metro',
     location: 'Istanbul, Turkey',
     systemId: 'istanbul'
+  },
+  {
+    name: 'RER d\'Île-de-France',
+    location: 'Paris, France',
+    systemId: 'ratp-rer'
+  },
+  {
+    name: 'Tyne and Wear Metro',
+    location: 'Tyne and Wear, England, UK',
+    systemId: 'nexus'
   }
 ]
 
