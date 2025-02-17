@@ -162,6 +162,16 @@ const values = [
     name: 'Montreal Metro',
     location: 'Montreal, QC, Canada',
     systemId: 'stm'
+  },
+  {
+    name: 'GO Transit',
+    location: 'Toronto, ON, Canada',
+    systemId: 'go'
+  },
+  {
+    name: 'VIA Rail',
+    location: 'Canada',
+    systemId: 'via'
   }
 ]
 
