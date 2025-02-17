@@ -8,9 +8,10 @@ files = [file for file in os.listdir(PATH) if os.path.isfile(os.path.join(PATH, 
 coordinates = []
 
 for file in files:
-    with open(os.path.join(PATH, file)) as f:
-        object = json.load(f)
-        coordinates += object["features"][0]["geometry"]["coordinates"]
+    with open(os.path.join(PATH, file)) as geojson:
+        object = json.load(geojson)
+        for feature in object["features"]:
+            coordinates += feature["geometry"]["coordinates"]
 
 combined_object = {
     "type": "Feature",
