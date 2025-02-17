@@ -157,6 +157,11 @@ const values = [
     name: 'PATCO',
     location: 'Philadelphia, PA, USA',
     systemId: 'patco'
+  },
+  {
+    name: 'Montreal Metro',
+    location: 'Montreal, QC, Canada',
+    systemId: 'stm'
   }
 ]
 
