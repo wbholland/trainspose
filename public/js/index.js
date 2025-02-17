@@ -127,6 +127,36 @@ const values = [
     name: 'Tyne and Wear Metro',
     location: 'Tyne and Wear, England, UK',
     systemId: 'nexus'
+  },
+  {
+    name: 'Sydney Trains',
+    location: 'Sydney, NSW, Australia',
+    systemId: 'sydney-trains'
+  },
+  {
+    name: 'NSW TrainLink',
+    location: 'NSW, Australia',
+    systemId: 'nsw-trainlink'
+  },
+  {
+    name: 'SEPTA Regional Rail',
+    location: 'Philadelphia, PA, USA',
+    systemId: 'septa-regional'
+  },
+  {
+    name: 'SEPTA Metro',
+    location: 'Philadelphia, PA, USA',
+    systemId: 'septa-metro'
+  },
+  {
+    name: 'Metra',
+    location: 'Chicago, IL, USA',
+    systemId: 'metra'
+  },
+  {
+    name: 'PATCO',
+    location: 'Philadelphia, PA, USA',
+    systemId: 'patco'
   }
 ]
 
