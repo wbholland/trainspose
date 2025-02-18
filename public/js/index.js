@@ -172,6 +172,21 @@ const values = [
     name: 'VIA Rail',
     location: 'Canada',
     systemId: 'via'
+  },
+  {
+    name: 'Tokyo Subway',
+    location: 'Tokyo, Japan',
+    systemId: 'tokyo-subway'
+  },
+  {
+    name: 'Shinkansen',
+    location: 'Japan',
+    systemId: 'shinkansen'
+  },
+  {
+    name: 'Berlin U-Bahn',
+    location: 'Berlin, Germany',
+    systemId: 'bvg'
   }
 ]
 
