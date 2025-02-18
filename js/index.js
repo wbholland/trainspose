@@ -187,6 +187,11 @@ const values = [
     name: 'Berlin U-Bahn',
     location: 'Berlin, Germany',
     systemId: 'bvg'
+  },
+  {
+    name: 'West Coast Express',
+    location: 'Vancouver, BC, Canada',
+    systemId: 'wce'
   }
 ]
 
