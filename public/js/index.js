@@ -202,6 +202,11 @@ const values = [
     name: 'Toronto Subway',
     location: 'Toronto, ON, Canada',
     systemId: 'ttc-subway'
+  },
+  {
+    name: 'Caltrain',
+    location: 'San Francisco, CA, USA',
+    systemId: 'caltrain'
   }
 ]
 
