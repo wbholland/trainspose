@@ -192,6 +192,16 @@ const values = [
     name: 'West Coast Express',
     location: 'Vancouver, BC, Canada',
     systemId: 'wce'
+  },
+  {
+    name: 'Toronto Streetcar',
+    location: 'Toronto, ON, Canada',
+    systemId: 'ttc-streetcar'
+  },
+  {
+    name: 'Toronto Subway',
+    location: 'Toronto, ON, Canada',
+    systemId: 'ttc-subway'
   }
 ]
 
