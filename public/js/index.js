@@ -59,7 +59,7 @@ const values = [
     systemId: 'ratp'
   },
   {
-    name: 'The T',
+    name: 'the T',
     location: 'Boston, MA, USA',
     systemId: 'mbta'
   },
@@ -69,12 +69,12 @@ const values = [
     systemId: 'amtrak'
   },
   {
-    name: 'The \'L\'',
+    name: 'the \'L\'',
     location: 'Chicago, IL, USA',
     systemId: 'cta'
   },
   {
-    name: 'The NYC Subway',
+    name: 'the NYC Subway',
     location: 'New York, NY, USA',
     systemId: 'mta'
   },
@@ -104,17 +104,17 @@ const values = [
     systemId: 'bart'
   },
   {
-    name: 'The Tube',
+    name: 'the Tube',
     location: 'London, England, UK',
     systemId: 'tube'
   },
   {
-    name: 'DC Metro',
+    name: 'the Washington Metro',
     location: 'Washington, DC, USA',
     systemId: 'wmata'
   },
   {
-    name: 'Istanbul Metro',
+    name: 'the Istanbul Metro',
     location: 'Istanbul, Turkey',
     systemId: 'istanbul'
   },
@@ -124,7 +124,7 @@ const values = [
     systemId: 'ratp-rer'
   },
   {
-    name: 'Tyne and Wear Metro',
+    name: 'the Tyne and Wear Metro',
     location: 'Tyne and Wear, England, UK',
     systemId: 'nexus'
   },
@@ -154,12 +154,12 @@ const values = [
     systemId: 'metra'
   },
   {
-    name: 'PATCO',
+    name: 'the PATCO Speedline',
     location: 'Philadelphia, PA, USA',
     systemId: 'patco'
   },
   {
-    name: 'Montreal Metro',
+    name: 'Métro de Montréal',
     location: 'Montreal, QC, Canada',
     systemId: 'stm'
   },
@@ -174,32 +174,32 @@ const values = [
     systemId: 'via'
   },
   {
-    name: 'Tokyo Subway',
+    name: 'the Tokyo Subway',
     location: 'Tokyo, Japan',
     systemId: 'tokyo-subway'
   },
   {
-    name: 'Shinkansen',
+    name: 'the Shinkansen',
     location: 'Japan',
     systemId: 'shinkansen'
   },
   {
-    name: 'Berlin U-Bahn',
+    name: 'the Berlin U-Bahn',
     location: 'Berlin, Germany',
     systemId: 'bvg'
   },
   {
-    name: 'West Coast Express',
+    name: 'the West Coast Express',
     location: 'Vancouver, BC, Canada',
     systemId: 'wce'
   },
   {
-    name: 'Toronto Streetcar',
+    name: 'the Toronto streetcar system',
     location: 'Toronto, ON, Canada',
     systemId: 'ttc-streetcar'
   },
   {
-    name: 'Toronto Subway',
+    name: 'the Toronto subway',
     location: 'Toronto, ON, Canada',
     systemId: 'ttc-subway'
   },
@@ -212,6 +212,11 @@ const values = [
     name: 'Muni Metro',
     location: 'San Francisco, CA, USA',
     systemId: 'muni'
+  },
+  {
+    name: 'LA Metro Rail',
+    location: 'Los Angeles, CA, USA',
+    systemId: 'la-metro'
   }
 ]
 
