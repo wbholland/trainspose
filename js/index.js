@@ -217,6 +217,11 @@ const values = [
     name: 'LA Metro Rail',
     location: 'Los Angeles, CA, USA',
     systemId: 'la-metro'
+  },
+  {
+    name: 'Chinese High Speed Rail',
+    location: 'China',
+    systemId: 'china-hsr'
   }
 ]
 
