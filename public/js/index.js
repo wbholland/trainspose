@@ -222,6 +222,21 @@ const values = [
     name: 'Chinese High Speed Rail',
     location: 'China',
     systemId: 'china-hsr'
+  },
+  {
+    name: 'V/Line',
+    location: 'Victoria, Australia',
+    systemId: 'vline'
+  },
+  {
+    name: 'the Melbourne tramway network',
+    location: 'Melbourne, Vic, Australia',
+    systemId: 'yarra'
+  },
+  {
+    name: 'Metro Trains Melbourne',
+    location: 'Melbourne, Vic, Australia',
+    systemId: 'melbourne-metro'
   }
 ]
 
