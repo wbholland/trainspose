@@ -252,6 +252,11 @@ const values = [
     name: 'the Vienna S-Bahn',
     location: 'Vienna, Austria',
     systemId: 'wien-sbahn'
+  },
+  {
+    name: 'the Seoul Metropolitan Subway',
+    location: 'Seoul, South Korea',
+    systemId: 'seoul'
   }
 ]
 
