@@ -237,6 +237,21 @@ const values = [
     name: 'Metro Trains Melbourne',
     location: 'Melbourne, Vic, Australia',
     systemId: 'melbourne-metro'
+  },
+  {
+    name: 'the Vienna tramway network',
+    location: 'Vienna, Austria',
+    systemId: 'wien-trams'
+  },
+  {
+    name: 'the Vienna U-Bahn',
+    location: 'Vienna, Austria',
+    systemId: 'wien-ubahn'
+  },
+  {
+    name: 'the Vienna S-Bahn',
+    location: 'Vienna, Austria',
+    systemId: 'wien-sbahn'
   }
 ]
 
