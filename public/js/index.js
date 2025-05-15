@@ -257,6 +257,31 @@ const values = [
     name: 'the Seoul Metropolitan Subway',
     location: 'Seoul, South Korea',
     systemId: 'seoul'
+  },
+  {
+    name: 'the Glasgow Subway',
+    location: 'Glasgow, Scotland, UK',
+    systemId: 'spt'
+  },
+  {
+    name: 'Manchester Metrolink',
+    location: 'Manchester, England, UK',
+    systemId: 'tfgm'
+  },
+  {
+    name: 'the South Yorkshire Supertram',
+    location: 'South Yorkshire, England, UK',
+    systemId: 'symca'
+  },
+  {
+    name: 'the Nice tram',
+    location: 'Nice, France',
+    systemId: 'transdev'
+  },
+  {
+    name: 'the Bilbao metro',
+    location: 'Bilbao, Basque Country, Spain',
+    systemId: 'metro-bilbao'
   }
 ]
 
