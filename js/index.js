@@ -282,6 +282,21 @@ const values = [
     name: 'the Bilbao metro',
     location: 'Bilbao, Basque Country, Spain',
     systemId: 'metro-bilbao'
+  },
+  {
+    name: 'the Seattle Center Monorail',
+    location: 'Seattle, WA, USA',
+    systemId: 'seattle-monorail'
+  },
+  {
+    name: 'the Seattle Streetcar',
+    location: 'Seattle, WA, USA',
+    systemId: 'seattle-streetcar'
+  },
+  {
+    name: 'the T Line',
+    location: 'Tacoma, WA, USA',
+    systemId: 't-line'
   }
 ]
 
