@@ -297,6 +297,31 @@ const values = [
     name: 'the T Line',
     location: 'Tacoma, WA, USA',
     systemId: 't-line'
+  },
+  {
+    name: 'the South East Queensland rail network',
+    location: 'Brisbane, QLD, Australia',
+    systemId: 'translink'
+  },
+  {
+    name: 'the Transperth train system',
+    location: 'Perth, WA, Australia',
+    systemId: 'transperth'
+  },
+  {
+    name: 'Adelaide Metro',
+    location: 'Adelaide, SA, Australia',
+    systemId: 'adelaidemetro'
+  },
+  {
+    name: 'AT',
+    location: 'Auckland, New Zealand',
+    systemId: 'at'
+  },
+  {
+    name: 'Metlink',
+    location: 'Wellington, New Zealand',
+    systemId: 'metlink'
   }
 ]
 
