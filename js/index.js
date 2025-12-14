@@ -322,6 +322,11 @@ const values = [
     name: 'Metlink',
     location: 'Wellington, New Zealand',
     systemId: 'metlink'
+  },
+  {
+    name: 'the Klang Valley Integrated Transit System',
+    location: 'Kuala Lumpur, Malaysia',
+    systemId: 'kvit'
   }
 ]
 
