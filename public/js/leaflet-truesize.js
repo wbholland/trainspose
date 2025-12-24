@@ -3,7 +3,6 @@ import turfBearing from '@turf/bearing'
 import turfDistance from '@turf/distance'
 import turfDestination from '@turf/destination'
 import transformRotate from '@turf/transform-rotate'
-import { coordAll as turfCoordAll } from '@turf/meta'
 import 'leaflet.path.drag'
 
 let id = 0
@@ -38,10 +37,8 @@ L.TrueSize = L.Layer.extend({
   initialize (geoJSON = this.geoJSON, options = {}) {
     // merge default and passed options
     this._options = Object.assign({}, this.options, options)
-    this._geometryType = geoJSON.geometry.type
-    this._isMultiPolygon = this._geometryType === 'MultiPolygon'
-    this._isMultiLineString = this._geometryType === 'MultiLineString'
     this._rotation = 0
+    this._mirrored = false
 
     L.Util.setOptions(this, this._options)
     this._initGeoJson(geoJSON, this._options)
@@ -70,6 +67,12 @@ L.TrueSize = L.Layer.extend({
 
   setRotation (degrees) {
     this._rotation = degrees
+    this._redraw()
+    this._refreshDraggable()
+  },
+
+  setReflection (isMirrored) {
+    this._mirrored = isMirrored
     this._redraw()
     this._refreshDraggable()
   },
@@ -146,19 +149,9 @@ L.TrueSize = L.Layer.extend({
   },
 
   _getBearingDistance (origin) {
-    if (this._isMultiPolygon) {
-      return this._currentLayer.feature.geometry.coordinates.map(polygon => polygon.map(linestring =>
-        linestring.map(point => this._getBearingAndDistance(origin, point)))
-      )
-    } else if (this._isMultiLineString) {
-      return this._currentLayer.feature.geometry.coordinates.map(linestring => linestring.map(point =>
-        this._getBearingAndDistance(origin, point))
-      )
-    } else {
-      return turfCoordAll(this._currentLayer.feature).map(point =>
-        this._getBearingAndDistance(origin, point)
-      )
-    }
+    return this._currentLayer.feature.geometry.coordinates.map(linestring => linestring.map(point =>
+      this._getBearingAndDistance(origin, point))
+    )
   },
 
   _getBearingAndDistance (origin, point) {
@@ -167,42 +160,39 @@ L.TrueSize = L.Layer.extend({
     return { bearing, distance }
   },
 
-  _redraw () {
-    let newPoints
+  // _reflect (feature, centerX) {
+  //   if (!this._isMultiLineString) return // todo implement other types if needed
 
-    if (this._isMultiPolygon) {
-      newPoints = this._initialBearingDistance.map(polygon => polygon.map(linestring =>
-        linestring.map(params => {
-          return turfDestination(this._center, params.distance, params.bearing, {
-            units: 'kilometers'
-          }).geometry.coordinates
-        }))
-      )
-    } else if (this._isMultiLineString) {
-      newPoints = this._initialBearingDistance.map(linestring =>
-        linestring.map(params => {
-          return turfDestination(this._center, params.distance, params.bearing, {
-            units: 'kilometers'
-          }).geometry.coordinates
-        })
-      )
-    } else {
-      newPoints = this._initialBearingDistance.map(params => {
-        return turfDestination(this._center, params.distance, params.bearing, {
+  //   const reflectedFeature = structuredClone(feature)
+  //   reflectedFeature.geometry.coordinates =
+  //     this._currentLayer.feature.geometry.coordinates.map(
+  //       linestring => linestring.map(
+  //         point => {
+  //           const [bearing, distance] = this._getBearingAndDistance(point, [centerX, point[1]])
+  //           return turfDestination([centerX, point[1]], distance, bearing).geometry.coordinates
+  //         }
+  //       )
+  //     )
+  //   return reflectedFeature
+  // },
+
+  _redraw () {
+    const newPoints = this._initialBearingDistance.map(linestring =>
+      linestring.map(params => {
+        return turfDestination(this._center, params.distance, params.bearing * (this._mirrored ? -1 : 1), {
           units: 'kilometers'
         }).geometry.coordinates
       })
-    }
+    )
 
     const newFeature = {
       type: 'Feature',
       properties: {},
       geometry: {
-        type: this._geometryType,
-        coordinates: this._getCoordsByType(newPoints, this._geometryType)
+        type: 'MultiLineString',
+        coordinates: newPoints
       }
     }
-
     const rotatedFeature = transformRotate(newFeature, this._rotation, { pivot: this._center })
 
     this._geoJSONLayer.clearLayers()
@@ -218,27 +208,8 @@ L.TrueSize = L.Layer.extend({
     this._map.removeLayer(this._draggable)
 
     return this
-  },
-
-  _getCoordsByType (point, type) {
-    switch (type) {
-      case 'LineString': {
-        return point
-      }
-      case 'Polygon': {
-        return [point]
-      }
-      case 'MultiPolygon': {
-        return point
-      }
-      case 'MultiLineString': {
-        return point
-      }
-      default: {
-        return [point]
-      }
-    }
   }
+
 })
 
 L.trueSize = (geoJSON, options) => new L.TrueSize(geoJSON, options)
