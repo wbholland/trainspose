@@ -336,6 +336,11 @@ const values = [
     name: 'the Klang Valley Integrated Transit System',
     location: 'Kuala Lumpur, Malaysia',
     systemId: 'kvit'
+  },
+  {
+    name: 'Lynx',
+    location: 'Charlotte, NC',
+    systemId: 'cats'
   }
 ]
 
