@@ -27,10 +27,19 @@ let systemMap = L.trueSize(geojsonFeature, {
 systemMap.addTo(map)
 
 const handleRotation = (event) => {
-  systemMap.setRotation(parseInt(event.target.value))
+  systemMap.setRotation(event.target.valueAsNumber)
+}
+const handleReflection = (event) => {
+  systemMap.setReflection(event.target.checked)
 }
 
-document.getElementById('rotation-slider').addEventListener('input', handleRotation)
+const rotationSlider = document.getElementById('rotation-slider')
+rotationSlider.value = '0'
+rotationSlider.addEventListener('input', handleRotation)
+
+const mirrorToggle = document.getElementById('mirror-toggle')
+mirrorToggle.addEventListener('input', handleReflection)
+mirrorToggle.checked = false
 
 const options = {
   valueNames: ['name', 'location'],
@@ -327,6 +336,11 @@ const values = [
     name: 'the Klang Valley Integrated Transit System',
     location: 'Kuala Lumpur, Malaysia',
     systemId: 'kvit'
+  },
+  {
+    name: 'Lynx',
+    location: 'Charlotte, NC',
+    systemId: 'cats'
   }
 ]
 
@@ -347,6 +361,7 @@ const selectSystem = async (systemId) => {
   map.fitBounds(systemMap.getBounds())
   document.getElementById('system-select').textContent = values.find((obj) => obj.systemId === systemId).name
   document.getElementById('rotation-slider').value = 0
+  document.getElementById('mirror-toggle').value = false
   document.getElementById('close-system').click()
 }
 
