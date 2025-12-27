@@ -339,8 +339,13 @@ const values = [
   },
   {
     name: 'Lynx',
-    location: 'Charlotte, NC',
+    location: 'Charlotte, NC, USA',
     systemId: 'cats'
+  },
+  {
+    name: 'METRORail',
+    location: 'Houston, TX, USA',
+    systemId: 'metro'
   }
 ]
 
