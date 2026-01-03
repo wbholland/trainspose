@@ -353,7 +353,7 @@ const values = [
     systemId: 'dmrc'
   },
   {
-    name: 'Haagse tram',
+    name: 'the Hague tram',
     location: 'The Hague, Netherlands',
     systemId: 'htm'
   }
