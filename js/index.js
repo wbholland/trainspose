@@ -348,9 +348,14 @@ const values = [
     systemId: 'metro'
   },
   {
-    name: 'The Delhi Metro',
+    name: 'the Delhi Metro',
     location: 'National Capital Region, India',
     systemId: 'dmrc'
+  },
+  {
+    name: 'Haagse tram',
+    location: 'The Hague, Netherlands',
+    systemId: 'htm'
   }
 ]
 
