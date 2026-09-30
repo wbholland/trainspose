@@ -11,9 +11,9 @@ MicroModal.init({
 
 const map = L.map('map').setView([2.0, 102.0], 5)
 
-L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+L.tileLayer('http://services.arcgisonline.com/arcgis/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
   maxZoom: 19,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 }).addTo(map)
 
 const geojsonFeature = await fetch('geometry/test.json').then(response => response.json())
@@ -402,5 +402,5 @@ document.getElementById('location-search').addEventListener('submit', (event) =>
   selectLocation(document.getElementById('location-input').value)
 })
 
-selectSystem('ratp')
-selectLocation('seattle')
+await selectSystem('ratp')
+await selectLocation('seattle')
